@@ -14,7 +14,11 @@
 </template>
 
 <script setup>
-const { data } = await useFetch("/api/practice");
+// api dynamic data
+const { data } = await useFetch("/api/currency/GBP");
+
+// api data
+// const { data } = await useFetch("/api/practice");
 
 // send query params
 // const { data } = await useFetch("/api/practice?name=mario", {
