@@ -9,10 +9,19 @@
       sapiente perspiciatis nemo sed nobis veritatis deleniti laboriosam
       reiciendis accusantium incidunt. Minus dignissimos saepe quia.
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch("/api/practice");
+
+// send query params
+// const { data } = await useFetch("/api/practice?name=mario", {
+//   method: "post",
+//   body: { age: 30 },
+// });
+</script>
 
 <style scoped>
 h2 {
